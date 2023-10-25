@@ -7,11 +7,11 @@ def encode(password):
 
 
 def decode(password):
-    decoded = ''
-    for digit in password:
-        encoded_digit = str((int(digit)-3)%10)
-        decoded += encoded_digit
-    return decoded
+    encoded_password = ''
+    for i in range(len(password)):
+        password_integer = int(password[i]) - 3
+        encoded_password += str(password_integer%10)
+    return encoded_password
 
 
 def main():
