@@ -3,15 +3,15 @@ def encode(password):
     for digit in password:
         encoded_digit = (str(int(digit) + 3) % 10)
         encoded += encoded_digit
-        return encoded
+    return encoded
 
 
 def decode(password):
     decoded = ''
     for digit in password:
-        encoded_digit = (str(int(digit) - 3) % 10)
+        encoded_digit = str((int(digit)-3)%10)
         decoded += encoded_digit
-        return decoded
+    return decoded
 
 
 def main():
